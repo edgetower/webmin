@@ -81,7 +81,7 @@ var="$"
 var2=IP
 cat > $file_location <<EOF
 ping -c 5 $var$var2
-Ping IP
+Ping IP Address
 * 0 0 100 0 0 0 0 -
 IP:0:8.8.8.8:0,1:IP Address (x.x.x.x)
 EOF
