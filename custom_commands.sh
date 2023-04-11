@@ -129,7 +129,7 @@ EOF
 # 10
 file_location=$cmd_dir/$file10.cmd
 cat > $file_location <<EOF
-echo "Stopping all open TEST streams...\n\nThis takes about 5min to complete." && killall -12 gst-launch-1.0 && echo "\n\nDone!"
+echo "Stopping all open TEST streams...\n\n" && killall -12 gst-launch-1.0 && echo "\n\nDone!"
 STOP Streams
 root 0 0 94 1 0 0 0 -
 EOF
