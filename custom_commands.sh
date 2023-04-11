@@ -28,27 +28,27 @@ EOF
 # 2
 file_location=$cmd_dir/$file2.cmd
 cat > $file_location <<EOF
-sudo systemctl restart edgetower.service
+echo "Restarting E:T Service...\n\nThis takes about 3min to complete." && sudo systemctl restart edgetower.service
 Restart E:T Service
 edgetower 0 0 97 1 0 300 0 -
 EOF
 
 file_location=$cmd_dir/$file2.html
 cat > $file_location <<EOF
-This command will restart services. Takes about 3min to complete.
+ETA +/-3min to complete.
 EOF
 
 # 3
 file_location=$cmd_dir/$file3.cmd
 cat > $file_location <<EOF
-sudo reboot now
+echo "Restarting Device...\n\nThis takes about 5min to complete." && sudo reboot now
 Reboot Device
 edgetower 0 0 96 1 0 0 0 -
 EOF
 
 file_location=$cmd_dir/$file3.html
 cat > $file_location <<EOF
-This command will restart the device. This takes about 5min to complete.
+ETA +/- 5min to complete.
 EOF
 
 # 4
