@@ -83,7 +83,7 @@ cat > $file_location <<EOF
 ping -c 5 $var$var2
 Ping IP
 * 0 0 100 0 0 0 0 -
-IP:0:8.8.8.8:0,1:Provide a IP (x.x.x.x)
+IP:0:8.8.8.8:0,1:IP Address (x.x.x.x)
 EOF
 
 file_location=$cmd_dir/$file6.html
