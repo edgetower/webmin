@@ -138,3 +138,4 @@ file_location=$cmd_dir/$file10.html
 cat > $file_location <<EOF
 This will stop all the open test rtsp streams.
 EOF
+
