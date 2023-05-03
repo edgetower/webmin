@@ -19,6 +19,7 @@ file14=1683097385
 file15=1683097906
 file16=1683098048
 file17=1683105076
+file18=1683112121
 
 # 1
 file_location=$cmd_dir/$file1.cmd
@@ -241,4 +242,19 @@ EOF
 file_location=$cmd_dir/$file17.html
 cat > $file_location <<EOF
 Required only once
+EOF
+
+# 18
+file_location=$cmd_dir/$file18.cmd
+var="$"
+GATEWAY=GATEWAY
+cat > $file_location <<EOF
+sed -i "s/gateway\ .*/gateway $var$GATEWAY/" "/etc/network/interfaces" && echo "Updated the Default Gateway.."
+Update Gateway
+root 0 0 96 1 0 0 0 -
+GATEWAY:0::0,1:Gateway
+EOF
+
+file_location=$cmd_dir/$file18.html
+cat > $file_location <<EOF
 EOF
