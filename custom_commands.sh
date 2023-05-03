@@ -222,9 +222,9 @@ EOF
 # 16
 file_location=$cmd_dir/$file16.cmd
 cat > $file_location <<EOF
-sed -i "s/SYN_CONNECT\=.*/SYN_CONNECT=True/" "/home/edgetower/projects/edgetower/settings/.env" && echo "Synapse Connect Enabled"
-Enable Synapse Connect
-root 0 0 81 1 0 0 0 -
+sed -i "s/SYN_CONNECT\=.*/SYN_CONNECT=False/" "/home/edgetower/projects/edgetower/settings/.env" && echo "Synapse Connect Disabled"
+Disable Synapse Connect
+root 0 0 80 1 0 0 0 -
 EOF
 
 file_location=$cmd_dir/$file16.html
