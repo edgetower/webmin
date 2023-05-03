@@ -190,3 +190,55 @@ EOF
 file_location=$cmd_dir/$file13.html
 cat > $file_location <<EOF
 EOF
+
+# 14
+file_location=$cmd_dir/$file14.cmd
+var="$"
+TOKEN=TOKEN
+cat > $file_location <<EOF
+sed -i "s/SYN_TOKEN\=.*/SYN_TOKEN=$var$TOKEN/" "/home/edgetower/projects/edgetower/settings/.env" && echo "Updated the Synapse Token.."
+Update the Synapse Token
+root 0 0 82 1 0 0 0 -
+TOKEN:0::0,1:Token
+EOF
+
+file_location=$cmd_dir/$file14.html
+cat > $file_location <<EOF
+EOF
+
+# 15
+file_location=$cmd_dir/$file15.cmd
+cat > $file_location <<EOF
+sed -i "s/SYN_CONNECT\=.*/SYN_CONNECT=True/" "/home/edgetower/projects/edgetower/settings/.env" && echo "Synapse Connect Enabled"
+Enable Synapse Connect
+root 0 0 81 1 0 0 0 -
+EOF
+
+file_location=$cmd_dir/$file15.html
+cat > $file_location <<EOF
+EOF
+
+# 16
+file_location=$cmd_dir/$file16.cmd
+cat > $file_location <<EOF
+sed -i "s/SYN_CONNECT\=.*/SYN_CONNECT=True/" "/home/edgetower/projects/edgetower/settings/.env" && echo "Synapse Connect Enabled"
+Enable Synapse Connect
+root 0 0 81 1 0 0 0 -
+EOF
+
+file_location=$cmd_dir/$file16.html
+cat > $file_location <<EOF
+EOF
+
+# 17
+file_location=$cmd_dir/$file17.cmd
+cat > $file_location <<EOF
+echo "Enabling E:T Service..." && sudo systemctl enable edgetower.service
+Enable E:T Service
+root 0 0 97 1 0 0 0 -
+EOF
+
+file_location=$cmd_dir/$file17.html
+cat > $file_location <<EOF
+Required only once
+EOF
