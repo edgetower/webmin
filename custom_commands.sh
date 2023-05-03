@@ -124,7 +124,7 @@ RTSP_stream=RTSP_stream
 cat > $file_location <<EOF
 echo "Wait for [Setting pipeline to PLAYING]. If this is not displayed, then the stream did not open...\n\nIf the stream is PLAYING:\n 1. Manually stop the stream with the STOP Streams Command to avoid opening multiple streams.\n\nIf the stream did not open:\n 1. Please recheck the camera configs.\n 2. Check username and password.\n\n" && sleep 3 && echo "Executing command..\n\n" && sleep 2 && gst-launch-1.0 rtspsrc user-id=$var$USER user-pw=$var$PASS location=$var$RTSP_stream ! application/x-rtp, media=video, clock-rate=90000, encoding-name=H264 ! rtph264depay ! avdec_h264 ! videoconvert ! videoscale ! videorate ! video/x-raw, width=640, height=368, framerate=4/1 ! fakesink sync=false
 Test RTSP Stream
-root 0 0 95 1 0 10 0 -
+root 0 0 93 1 0 10 0 -
 RTSP_stream:0::0,1:RTSP Stream
 USER:0::0,1:Username
 PASS:0::0,1:Password
@@ -139,7 +139,7 @@ file_location=$cmd_dir/$file10.cmd
 cat > $file_location <<EOF
 echo "Stopping all open TEST streams...\n\n" && killall -12 gst-launch-1.0 && echo "\n\nDone!"
 STOP Streams
-root 0 0 94 1 0 0 0 -
+root 0 0 92 1 0 0 0 -
 EOF
 
 file_location=$cmd_dir/$file10.html
@@ -236,7 +236,7 @@ file_location=$cmd_dir/$file17.cmd
 cat > $file_location <<EOF
 echo "Enabling E:T Service..." && sudo systemctl enable edgetower.service
 Enable E:T Service
-root 0 0 97 1 0 0 0 -
+root 0 0 95 1 0 0 0 -
 EOF
 
 file_location=$cmd_dir/$file17.html
@@ -251,7 +251,7 @@ GATEWAY=GATEWAY
 cat > $file_location <<EOF
 sed -i "s/gateway\ .*/gateway $var$GATEWAY/" "/etc/network/interfaces" && echo "Updated the Default Gateway.."
 Update Gateway
-root 0 0 96 1 0 0 0 -
+root 0 0 94 1 0 0 0 -
 GATEWAY:0::0,1:Gateway
 EOF
 
