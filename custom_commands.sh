@@ -12,6 +12,13 @@ file7=config
 file8=etguest
 file9=1681122159
 file10=1681196588
+file11=1683093901
+file12=1683095931
+file13=1683096764
+file14=1683097385
+file15=1683097906
+file16=1683098048
+file17=1683105076
 
 # 1
 file_location=$cmd_dir/$file1.cmd
@@ -139,3 +146,47 @@ cat > $file_location <<EOF
 This will stop all the open test rtsp streams.
 EOF
 
+# 11
+file_location=$cmd_dir/$file11.cmd
+var="$"
+PROFILE_ID=PROFILE_ID
+cat > $file_location <<EOF
+sed -i "s/ET_API_PROFILE\=.*/ET_API_PROFILE=$var$PROFILE_ID/" "/home/edgetower/projects/edgetower/settings/.env" && echo "Updated the Profile id.."
+Update E:T Device Profile Id
+root 0 0 85 1 0 0 0 -
+PROFILE_ID:0::0,1:Profile id
+EOF
+
+file_location=$cmd_dir/$file11.html
+cat > $file_location <<EOF
+EOF
+
+# 12
+file_location=$cmd_dir/$file12.cmd
+var="$"
+TOKEN=TOKEN
+cat > $file_location <<EOF
+sed -i "s/ET_API_TOKEN\=.*/ET_API_TOKEN=$var$TOKEN/" "/home/edgetower/projects/edgetower/settings/.env" && echo "Updated the Profile Token.."
+Update E:T Profile Token
+root 0 0 84 1 0 0 0 -
+TOKEN:0::0,1:Token
+EOF
+
+file_location=$cmd_dir/$file12.html
+cat > $file_location <<EOF
+EOF
+
+# 13
+file_location=$cmd_dir/$file13.cmd
+var="$"
+H_URL=H_URL
+cat > $file_location <<EOF
+sed -i "s~SYN_URL\=.*~SYN_URL=$var$H_URL~" "/home/edgetower/projects/edgetower/settings/.env" && echo "Updated the Synapse URL.." 
+Update Synapse URL
+root 0 0 83 1 0 0 0 -
+H_URL:0::0,1:Synapse URL
+EOF
+
+file_location=$cmd_dir/$file13.html
+cat > $file_location <<EOF
+EOF
