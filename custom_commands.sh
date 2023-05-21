@@ -151,8 +151,9 @@ EOF
 file_location=$cmd_dir/$file11.cmd
 var="$"
 PROFILE_ID=PROFILE_ID
+MQTT_TOPIC=PROFILE_ID
 cat > $file_location <<EOF
-sed -i "s/ET_API_PROFILE\=.*/ET_API_PROFILE=$var$PROFILE_ID/" "/home/edgetower/projects/edgetower/settings/.env" && sed -i "s/MQTT_TOPIC\=.*/MQTT_TOPIC=$var$PROFILE_ID/" "/home/edgetower/projects/edgetower/settings/.env" && echo "Updated the Profile id.."
+sed -i "s/ET_API_PROFILE\=.*/ET_API_PROFILE=$var$PROFILE_ID/" "/home/edgetower/projects/edgetower/settings/.env" && sed -i "s/MQTT_TOPIC\=.*/MQTT_TOPIC=$var$MQTT_TOPIC/" "/home/edgetower/projects/edgetower/settings/.env" && echo "Updated the Profile id.."
 Update E:T Device Profile Id
 root 0 0 85 1 0 0 0 -
 PROFILE_ID:0::0,1:Profile id
